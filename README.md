@@ -1,7 +1,6 @@
 # Kipppunkt (Bifurkation) – Hysterese, verspätetes Kippen und was die Frühwarnung wert ist – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-kipppunkt-bifurkation-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-kipppunkt-bifurkation-demo.streamlit.app/)**
 
 Stück der Linie **Dynamische Systeme** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. **„Kipppunkt“ heißt hier eine Bifurkation einer Differentialgleichung**, nicht die Netzschwelle (Anteil aktiver Nachbarn) wie in
 `kaskaden-demo` und `komplexe-ansteckung-demo` und nicht der Wechsel des besten Plans bei verschobenem Gewicht wie in `gewichte-kippen-demo`; deshalb steht „(Bifurkation)“ im Titel. Das Stück hängt an
