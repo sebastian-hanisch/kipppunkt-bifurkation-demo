@@ -46,10 +46,11 @@ def test_equilibria_at_h_zero():
 
 
 def test_symmetry_x_h():
-    """f(-x, -h) = -f(x, h): exakt (Vorzeichenwechsel ändert in Gleitkomma nichts)."""
+    """f(-x, -h) = -f(x, h) bis auf die letzte Stelle: Addition und Vorzeichenwechsel sind in Gleitkomma symmetrisch, `x ** 3` aber nicht
+    plattformunabhängig (die Linux-CI weicht von Windows im letzten Bit ab), darum ein Band von wenigen Einheiten der letzten Stelle."""
     rng = np.random.default_rng(1)
     x, h = rng.uniform(-2, 2, 200), rng.uniform(-1, 1, 200)
-    assert np.array_equal(K.f(-x, -h), -K.f(x, h))
+    np.testing.assert_allclose(K.f(-x, -h), -K.f(x, h), rtol=1e-14, atol=1e-14)
     assert K.well_root(-0.3) == pytest.approx(-K.well_root(0.3), abs=1e-12)
 
 
